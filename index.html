@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KALYANI ENTERPRISES | Authorized HCH Distributor</title>
-    <link rel="stylesheet" href="style.css?v=1.1"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="container navbar">
-        <div class="logo"><span class="brand-red">KALYANI</span> <span>ENTERPRISES</span></div> 
+            <a href="index.html" class="logo">
+                <span class="brand-red">KALYANI</span> <span>ENTERPRISES</span>
+            </a> 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -23,12 +25,11 @@
 
     <section class="hero">
         <div class="container">
-            <p class="hero-sub">Authorized Distributor</p>
-            <h1>HCH High-Precision Bearings</h1>
+            <p class="hero-sub" style="color: var(--brand-red); letter-spacing: 2px; font-weight: 700;">Authorized HCH Distributor</p>
+            <h1>High-Precision Bearings</h1>
             <h3>Precision at scale for the modern manufacturer</h3>
-            <div class="cta-group">
-                <a href="#series" class="btn-submit" style="text-decoration: none; display: inline-block;">Explore Inventory</a>
-                <p class="moq-tag">Wholesale Only</p>
+            <div style="margin-top: 40px;">
+                <a href="#series" class="btn-submit" style="text-decoration: none; display: inline-block; width: auto; padding: 18px 40px;">Explore Inventory</a>
             </div>
         </div>
     </section>
@@ -36,16 +37,16 @@
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Us.</h2>
-            <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: var(--secondary);">
+            <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--secondary); font-size: 1.1rem;">
                 <p><strong>Established in 1998</strong>, Kalyani Enterprises has been a cornerstone in the industrial supply chain for over two decades. As an authorized distributor of HCH bearings, we bridge the gap between world-class manufacturing and local industrial requirements.</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; text-align: left;">
-                    <div>
-                        <h4 style="color: var(--primary); margin-bottom: 10px;">Our Mission</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; text-align: left;">
+                    <div class="feat" style="background: var(--light); padding: 30px; border-radius: 20px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red);">Our Mission</h4>
                         <p>To empower Indian manufacturers with high-precision mechanical components that ensure zero-downtime operations.</p>
                     </div>
-                    <div>
-                        <h4 style="color: var(--primary); margin-bottom: 10px;">Our Vision</h4>
-                        <p>To be the most trusted name in wholesale bearing distribution, recognized for technical expertise and ready-stock reliability.</p>
+                    <div class="feat" style="background: var(--light); padding: 30px; border-radius: 20px;">
+                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red);">Our Vision</h4>
+                        <p>To be the most trusted name in wholesale bearing distribution, recognized for technical expertise and reliability.</p>
                     </div>
                 </div>
             </div>
@@ -57,9 +58,9 @@
             <h2 class="section-title">The Collection.</h2>
             <div class="bento-grid">
                 
-                <a href="6000.html" class="bento-item item-large">
+                <a href="6000.html" class="bento-item">
                     <div class="bento-content">
-                        <span class="badge">Most Versatile</span>
+                        <span style="color: var(--brand-red); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Most Versatile</span>
                         <h3>60 Series</h3>
                         <p>Extra Light Deep Groove</p>
                         <small class="view-spec">View Specs →</small>
@@ -67,71 +68,31 @@
                     <img src="6000-bearing.jpeg" alt="60 Series" class="bento-img">
                 </a>
 
-                <a href="6200.html" class="bento-item item-small">
+                <a href="6200.html" class="bento-item">
                     <div class="bento-content">
+                        <span style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Standard</span>
                         <h3>62 Series</h3>
                         <p>Light Duty Excellence</p>
                         <small class="view-spec">View Specs →</small>
                     </div>
-                    <img src="6200-bearing.jpeg" alt="62 Series" class="bento-img-small">
+                    <img src="6200-bearing.jpeg" alt="62 Series" class="bento-img">
                 </a>
 
-                <a href="6300.html" class="bento-item item-small">
+                <a href="6300.html" class="bento-item">
                     <div class="bento-content">
+                        <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Heavy Duty</span>
                         <h3>63 Series</h3>
                         <p>Medium Duty Power</p>
                         <small class="view-spec">View Specs →</small>
                     </div>
-                    <img src="6300-bearing.jpeg" alt="63 Series" class="bento-img-small">
+                    <img src="6300-bearing.jpeg" alt="63 Series" class="bento-img">
                 </a>
 
             </div>
         </div>
     </section>
 
-    <section class="section bg-dark">
-        <div class="container">
-            <div class="b2b-features">
-                <div class="feat">
-                    <h4>24-Hour Dispatch</h4>
-                    <p>Ready-stock availability for standard SKUs ensures your production never stops.</p>
-                </div>
-                <div class="feat">
-                    <h4>Vibration & Clearance</h4>
-                    <p>Full support for V1/V2 vibration grades and C2/C3 clearance specifications.</p>
-                </div>
-                <div class="feat">
-                    <h4>Custom Sourcing</h4>
-                    <p>Non-standard sizes and specialized tools sourced through our global network.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="inquiry-card">
-                <h2 style="color: var(--primary); margin-bottom: 10px;">Request a Wholesale Quote</h2>
-                <p style="color: var(--secondary); margin-bottom: 30px;">Strictly B2B Operations.</p>
-                <form>
-                    <div class="input-row">
-                        <input type="text" placeholder="Company Name" required>
-                        <input type="text" placeholder="GST Number" required>
-                    </div>
-                    <div class="input-row">
-                        <input type="tel" placeholder="Phone Number" required>
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <textarea placeholder="List SKUs and Quantities" rows="5"></textarea>
-                    <button type="submit" class="btn-submit">Submit Formal Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <div class="floating-contact">
-        <a href="https://wa.me/910000000000" class="wa">WhatsApp Inquiry</a>
-    </div>
+    <a href="https://wa.me/910000000000" class="whatsapp-float">WhatsApp Inquiry</a>
 
     <footer>
         <div class="container footer-content">
