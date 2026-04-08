@@ -27,7 +27,13 @@ nav {
 }
 .navbar { display: flex; justify-content: space-between; align-items: center; }
 
-.logo { font-weight: 700; font-size: 1.3rem; color: var(--secondary); letter-spacing: -0.5px; }
+/* Logo Styling: KALYANI (Firebrick Red) ENTERPRISES (White) */
+.logo { 
+    font-weight: 700; 
+    font-size: 1.3rem; 
+    color: #b22222; /* UPDATED TO RED */
+    letter-spacing: -0.5px; 
+}
 .logo span { font-weight: 300; color: var(--white); }
 
 .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
