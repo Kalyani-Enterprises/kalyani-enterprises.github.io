@@ -1,11 +1,11 @@
 :root {
-    --primary: #1a365d;    /* Deep Industrial Blue */
-    --brand-red: #E31E24;  /* High-Visibility Red */
-    --secondary: #86868b;  /* Apple-style Grey */
-    --accent: #0066cc;     /* Action Blue */
+    --primary: #1a365d;    /* YOUR ORIGINAL BLUE */
+    --brand-red: #E31E24;  /* THE RED LOGO */
+    --secondary: #4a5568;  /* YOUR ORIGINAL GREY */
+    --accent: #2b6cb0;     /* YOUR ORIGINAL ACCENT */
     --white: #ffffff;
-    --light: #f5f5f7;      /* Soft Apple Grey Background */
-    --dark: #1d1d1f;       /* Apple-style Deep Black */
+    --light: #f7fafc;      
+    --dark: #2d3748;       
 }
 
 body {
@@ -19,150 +19,88 @@ body {
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
 
-/* --- NAVIGATION --- */
+/* --- NAVIGATION (Restored Original Blue) --- */
 nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px); /* Glassmorphism effect */
+    background: var(--primary);
     position: sticky; top: 0; z-index: 1000;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .navbar { display: flex; justify-content: space-between; align-items: center; }
-
 .logo { font-weight: 700; font-size: 1.3rem; letter-spacing: -0.5px; }
 .brand-red { color: var(--brand-red); font-weight: 800; }
-.logo span:last-child { font-weight: 300; color: var(--dark); }
-
-.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; color: var(--dark); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: var(--accent); }
+.logo span:last-child { font-weight: 300; color: var(--white); } /* Enterprises in White */
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--white); font-size: 0.9rem; font-weight: 600; }
 
 /* --- HERO SECTION --- */
-.hero { padding: 120px 0; text-align: center; background: var(--white); }
+.hero { padding: 120px 0; text-align: center; background: var(--light); }
 .hero-sub { color: #bf4800; font-weight: 700; font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.2px; }
-.hero h1 { font-size: 3.8rem; font-weight: 700; letter-spacing: -2px; margin: 0; line-height: 1.1; }
-.hero h3 { font-size: 1.6rem; color: var(--secondary); font-weight: 400; margin-top: 15px; }
-.moq-tag { margin-top: 25px; font-size: 0.8rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.hero h1 { font-size: 3.5rem; font-weight: 700; color: var(--primary); letter-spacing: -1.5px; margin: 0; }
+.hero h3 { font-size: 1.5rem; color: var(--secondary); font-weight: 400; margin-top: 15px; }
 
-/* --- BENTO GRID (The UI-UX Pro Max Layout) --- */
-.bg-light { background-color: var(--light); }
-.section { padding: 100px 0; }
-.section-title { font-size: 2.8rem; font-weight: 700; margin-bottom: 50px; letter-spacing: -1px; }
+/* --- BENTO GRID FIXES --- */
+.bg-light { background-color: var(--white); }
+.section { padding: 80px 0; }
+.section-title { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin-bottom: 40px; }
 
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 280px);
+    grid-template-rows: repeat(2, 300px);
     gap: 24px;
 }
 
 .bento-item {
-    background: var(--white);
-    border-radius: 28px;
+    background: #f8fafc; /* Light subtle background for boxes */
+    border-radius: 24px;
     padding: 35px;
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
     position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0,0,0,0.03);
+    overflow: hidden; /* CRITICAL: Clips images */
+    transition: 0.3s ease;
+    border: 1px solid #e2e8f0;
 }
 
-.bento-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-}
+.bento-item:hover { transform: translateY(-5px); border-color: var(--accent); }
+.item-large { grid-row: span 2; background: #edf2f7; }
 
-.item-large { grid-row: span 2; background: #e8e8ed; }
-
-.bento-content { position: relative; z-index: 2; }
-.bento-content h3 { font-size: 2rem; margin: 10px 0 5px 0; }
+.bento-content { position: relative; z-index: 5; }
+.bento-content h3 { font-size: 1.8rem; color: var(--primary); margin: 10px 0; }
 .bento-content p { color: var(--secondary); font-size: 1rem; }
+.view-spec { color: var(--accent); font-weight: 700; margin-top: 20px; display: block; }
 
-.badge {
-    background: var(--brand-red);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.view-spec { color: var(--accent); font-weight: 600; margin-top: 25px; display: block; font-size: 0.9rem; }
-
-/* --- UPDATED BENTO IMAGE RULES --- */
+/* IMAGE SCALING PRO-MAX */
 .bento-img {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 280px;         /* This limits the width */
-    height: auto;         /* Keeps the shape natural */
-    object-fit: contain;  /* Prevents cropping */
-    mix-blend-mode: multiply; /* Makes white backgrounds disappear */
-    transition: transform 0.5s ease;
-    z-index: 1;           /* Keeps it behind the text */
+    bottom: -10px;
+    right: -10px;
+    width: 250px;       /* Fixed size so it doesn't take over */
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: 0.4s ease;
 }
 
-/* Ensure the text stays on top and clickable */
-.bento-content {
-    position: relative;
-    z-index: 5; 
+.item-large .bento-img {
+    width: 320px;      /* Slightly larger for the big box */
 }
 
-/* Fix for the blue links in your screenshot */
-.bento-item {
-    text-decoration: none !important; /* Removes the underline from the box */
-    color: var(--dark) !important;    /* Keeps text black, not purple/blue */
-}
+.bento-item:hover .bento-img { transform: scale(1.05); }
 
-.badge {
-    display: inline-block;
-    background: var(--brand-red);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-/* --- B2B FEATURES --- */
-.bg-dark { background: var(--dark); color: #fff; padding: 100px 0; }
-.b2b-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
-.feat h4 { font-size: 1.3rem; margin-bottom: 15px; color: var(--white); }
-.feat p { color: #a1a1a6; line-height: 1.6; }
+/* --- FORM & B2B --- */
+.bg-dark { background: var(--primary); color: #fff; padding: 80px 0; }
+.b2b-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.feat h4 { font-size: 1.2rem; margin-bottom: 10px; border-bottom: 2px solid var(--accent); display: inline-block; }
+.feat p { color: #cbd5e0; }
 
-/* --- INQUIRY FORM --- */
-.inquiry-card { background: var(--light); padding: 60px; border-radius: 32px; max-width: 800px; margin: 0 auto; }
-.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-input, textarea { 
-    padding: 18px; border-radius: 14px; border: 1px solid #d2d2d7; 
-    width: 100%; box-sizing: border-box; font-size: 1rem;
-    transition: border-color 0.2s;
-}
-input:focus { border-color: var(--accent); outline: none; }
-.btn-submit { 
-    background: var(--dark); color: #fff; border: none; 
-    padding: 18px 36px; border-radius: 14px; font-weight: 600; 
-    cursor: pointer; width: 100%; font-size: 1rem;
-}
-.btn-submit:hover { background: #000; }
+.inquiry-card { background: var(--light); padding: 50px; border-radius: 20px; border: 1px solid #e2e8f0; }
+.btn-submit { background: var(--accent); color: white; border: none; padding: 18px; border-radius: 10px; font-weight: 700; cursor: pointer; width: 100%; }
 
-/* --- FLOATING ELEMENTS --- */
-.wa { 
-    background: #000; color: #fff; padding: 12px 24px; 
-    border-radius: 50px; text-decoration: none; font-weight: 600; 
-    font-size: 0.85rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
+/* --- WA --- */
+.wa { background: #25D366; color: #fff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; }
 
-/* --- FOOTER --- */
-footer { padding: 60px 0; border-top: 1px solid #e2e8f0; text-align: center; color: var(--secondary); font-size: 0.85rem; }
-
-/* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.8rem; }
     .bento-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-    .item-large { grid-row: span 1; min-height: 320px; }
-    .b2b-features { grid-template-columns: 1fr; gap: 30px; }
-    .input-row { grid-template-columns: 1fr; }
+    .item-large { grid-row: span 1; min-height: 300px; }
+    .b2b-features, .input-row { grid-template-columns: 1fr; }
 }
