@@ -13,6 +13,8 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     -webkit-font-smoothing: antialiased;
+    /* Smooth scroll makes the Nav links feel premium */
+    scroll-behavior: smooth; 
 }
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
@@ -26,7 +28,7 @@ nav {
 }
 .navbar { display: flex; justify-content: space-between; align-items: center; }
 
-/* Logo Styling */
+/* Logo Styling: KALYANI (Steel Grey) ENTERPRISES (White) */
 .logo { font-weight: 700; font-size: 1.3rem; color: var(--secondary); letter-spacing: -0.5px; }
 .logo span { font-weight: 300; color: var(--white); }
 
@@ -38,7 +40,18 @@ nav {
 .hero-sub { color: #bf4800; font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.5px; }
 .hero h1 { font-size: 3.5rem; font-weight: 700; color: var(--primary); letter-spacing: -1.5px; margin: 0; }
 .hero h3 { font-size: 1.4rem; color: var(--secondary); font-weight: 400; margin-top: 10px; }
-.moq-tag { margin-top: 20px; font-size: 0.85rem; color: var(--secondary); font-weight: 600; text-transform: uppercase; }
+
+/* Centered Wholesale Tag */
+.moq-tag { 
+    margin-top: 25px; 
+    font-size: 0.9rem; 
+    color: var(--secondary); 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1.2px;
+    display: block;
+    text-align: center;
+}
 
 /* Product Grid */
 .section { padding: 80px 0; }
@@ -73,4 +86,9 @@ input, textarea { padding: 15px; border-radius: 8px; border: 1px solid #d2d2d7; 
 /* Footer */
 .footer-content { padding: 40px 0; border-top: 1px solid #e2e8f0; text-align: center; color: var(--secondary); font-size: 0.8rem; }
 
-@media (max-width: 768px) { .series-grid, .b2b-features, .input-row { grid-template-columns: 1fr; } .hero h1 { font-size: 2.5rem; } }
+@media (max-width: 768px) { 
+    .series-grid, .b2b-features, .input-row { grid-template-columns: 1fr; } 
+    .hero h1 { font-size: 2.5rem; } 
+    /* Adjust about columns for mobile */
+    #about div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 20px !important; }
+}
