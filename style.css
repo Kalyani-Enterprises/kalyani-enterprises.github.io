@@ -91,11 +91,41 @@ nav {
 
 .view-spec { color: var(--accent); font-weight: 600; margin-top: 25px; display: block; font-size: 0.9rem; }
 
-/* Images in Bento */
-.bento-img { position: absolute; bottom: 20px; right: 20px; width: 60%; mix-blend-mode: multiply; transition: transform 0.5s ease; }
-.bento-img-small { position: absolute; bottom: 10px; right: 10px; width: 45%; mix-blend-mode: multiply; }
-.bento-item:hover .bento-img { transform: scale(1.08) rotate(-5deg); }
+/* --- UPDATED BENTO IMAGE RULES --- */
+.bento-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 280px;         /* This limits the width */
+    height: auto;         /* Keeps the shape natural */
+    object-fit: contain;  /* Prevents cropping */
+    mix-blend-mode: multiply; /* Makes white backgrounds disappear */
+    transition: transform 0.5s ease;
+    z-index: 1;           /* Keeps it behind the text */
+}
 
+/* Ensure the text stays on top and clickable */
+.bento-content {
+    position: relative;
+    z-index: 5; 
+}
+
+/* Fix for the blue links in your screenshot */
+.bento-item {
+    text-decoration: none !important; /* Removes the underline from the box */
+    color: var(--dark) !important;    /* Keeps text black, not purple/blue */
+}
+
+.badge {
+    display: inline-block;
+    background: var(--brand-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 /* --- B2B FEATURES --- */
 .bg-dark { background: var(--dark); color: #fff; padding: 100px 0; }
 .b2b-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
