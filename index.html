@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALYANI ENTERPRISES | Authorized HCH Distributor</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+<div class="container navbar">
+<div class="logo">KALYANI <span>ENTERPRISES</span></div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#series">Products</a></li>
+<li><a href="#contact" class="btn-quote">Bulk Inquiry</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<p class="hero-sub">Authorized Distributor</p>
+<h1>HCH High-Precision Bearings.</h1>
+<h3>Precision at scale for the modern manufacturer.</h3>
+<div class="cta-group">
+<a href="#series" class="btn-main">Explore Series</a>
+<p class="moq-tag">Wholesale Only • MOQ: Case Quantities Only</p>
+</div>
+</div>
+</section>
+
+<section id="series" class="section">
+<div class="container">
+<h2 class="section-title">The Series.</h2>
+<div class="series-grid">
+<div class="series-card" onclick="toggleDetails('6000')">
+<span>6000 Series</span>
+<p>Extra Light Deep Groove</p>
+<div id="6000-details" class="sku-list">
+<div class="sku-item">6001-2RS <span>Spec Details ></span></div>
+<div class="sku-item">6002-ZZ <span>Spec Details ></span></div>
+<div class="sku-item">6005-C3 <span>Spec Details ></span></div>
+</div>
+</div>
+<div class="series-card" onclick="toggleDetails('6200')">
+<span>6200 Series</span>
+<p>Light Deep Groove</p>
+<div id="6200-details" class="sku-list">
+<div class="sku-item">6201-V2 <span>Spec Details ></span></div>
+<div class="sku-item">6202-2RS <span>Spec Details ></span></div>
+</div>
+</div>
+<div class="series-card" onclick="toggleDetails('6300')">
+<span>6300 Series</span>
+<p>Medium Deep Groove</p>
+<div id="6300-details" class="sku-list">
+<div class="sku-item">6301-C3 <span>Spec Details ></span></div>
+<div class="sku-item">6304-ZZ <span>Spec Details ></span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section bg-dark">
+<div class="container">
+<div class="b2b-features">
+<div class="feat">
+<h4>24-Hour Dispatch</h4>
+<p>Ready-stock availability for standard SKUs ensures your production never stops.</p>
+</div>
+<div class="feat">
+<h4>Vibration & Clearance</h4>
+<p>Full support for V1/V2 vibration grades and C2/C3 clearance specifications.</p>
+</div>
+<div class="feat">
+<h4>Custom Sourcing</h4>
+<p>Non-standard sizes and specialized tools sourced through our global network.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+<div class="inquiry-card">
+<h2>Request a Wholesale Quote</h2>
+<form>
+<div class="input-row">
+<input type="text" placeholder="Company Name" required>
+<input type="text" placeholder="GST Number" required>
+</div>
+<textarea placeholder="List SKUs and Quantities (e.g., 6201-2RS - 500 units)"></textarea>
+<button type="submit" class="btn-submit">Submit Formal Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+
+<div class="floating-contact">
+<a href="https://wa.me/910000000000" class="wa">WhatsApp</a>
+</div>
+
+<script>
+function toggleDetails(id) {
+const list = document.getElementById(id + '-details');
+list.style.display = list.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
