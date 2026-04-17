@@ -6,6 +6,8 @@
     <title>KALYANI ENTERPRISES | Authorized HCH Distributor</title>
     <link rel="stylesheet" href="style.css?v=1.2"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -23,13 +25,18 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <p class="hero-sub" style="color: var(--brand-red); letter-spacing: 2px; font-weight: 700;">Authorized HCH Distributor</p>
-            <h1>High-Precision Bearings</h1>
-            <h3>Precision at scale for the modern manufacturer</h3>
-            <div style="margin-top: 40px;">
-                <a href="#series" class="btn-submit" style="text-decoration: none; display: inline-block; width: auto; padding: 18px 40px;">Explore Inventory</a>
+    <section class="hero-scroll-wrapper">
+        <div class="hero-sticky">
+            <div class="hero-content">
+                <p class="hero-sub" style="color: var(--brand-red); letter-spacing: 2px; font-weight: 700;">Authorized HCH Distributor</p>
+                <h1>High-Precision Bearings</h1>
+                <h3>Precision at scale for the modern manufacturer</h3>
+            </div>
+            <div class="hero-visual">
+                <img src="6000-diagram.png" alt="Featured HCH Bearing" id="main-product-img">
+            </div>
+            <div class="hero-footer-text">
+                <p>WHOLESALE ONLY</p>
             </div>
         </div>
     </section>
@@ -65,7 +72,7 @@
                         <p>Extra Light Deep Groove</p>
                         <small class="view-spec">View Specs →</small>
                     </div>
-                    <img src="6000-bearing.jpeg" alt="60 Series" class="bento-img">
+                    <img src="6000-diagram.png" alt="60 Series" class="bento-img">
                 </a>
 
                 <a href="6200.html" class="bento-item">
@@ -91,7 +98,25 @@
             </div>
         </div>
     </section>
-
+    <section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Bulk Inquiry.</h2>
+        <div class="inquiry-card">
+            <form>
+                <div class="input-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="text" placeholder="Company Name" required>
+                </div>
+                <div class="input-row">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number (GST Linked)" required>
+                </div>
+                <textarea rows="5" placeholder="List your SKUs and Quantities (e.g., 6201-2RS x 500pcs)"></textarea>
+                <button type="submit" class="btn-submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+    </section>
     <a href="https://wa.me/910000000000" class="whatsapp-float">WhatsApp Inquiry</a>
 
     <footer>
@@ -100,5 +125,28 @@
         </div>
     </footer>
 
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".hero-scroll-wrapper",
+                start: "top top",
+                end: "+=150%", // How long the scroll lasts
+                pin: true,     // Keeps the section fixed while zooming
+                scrub: 1,      // Smoothly ties animation to scroll
+            }
+        });
+
+        tl.to("#main-product-img", {
+            scale: 2.5,     // Zoom level
+            ease: "none"
+        }, 0)
+        .to(".hero-content", {
+            opacity: 0,
+            y: -50,
+            ease: "none"
+        }, 0);
+    </script>
 </body>
 </html>
