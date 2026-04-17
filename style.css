@@ -6,9 +6,6 @@
     --white: #ffffff;
     --light: #f8fafc;      
     --dark: #2d3748; 
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.3);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 body {
@@ -33,39 +30,69 @@ nav {
 .brand-red { color: var(--brand-red); font-weight: 800; }
 .logo span:last-child { font-weight: 300; color: var(--white); } 
 .nav-links { list-style: none; display: flex; gap: 40px; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; color: var(--white); font-size: 0.95rem; font-weight: 500; opacity: 0.9; transition: 0.3s; }
-.nav-links a:hover { opacity: 1; color: var(--brand-red); }
+.nav-links a { text-decoration: none; color: var(--white); font-size: 0.95rem; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--brand-red); }
 
-/* --- HERO SECTION --- */
-/* Restored to your original simple layout but added overlap protection */
+/* --- HERO SECTION: FULL SCREEN WALLPAPER --- */
 .hero { 
-    padding: 100px 0; 
-    text-align: center; 
-    background: #D9D9D9; /* The grey background from your screenshot */
+    height: 100vh; /* Covers the entire viewport height */
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centers text vertically */
+    text-align: center;
+    background-image: url('hero-main.png'); /* Your background image */
+    background-size: cover; /* Forces image to fill the whole screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Fallback if image doesn't load */
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(217, 217, 217, 0.4); /* Subtle grey overlay */
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 10; /* Ensures text is always ABOVE the image */
-    margin-bottom: -50px; /* Pulls the image closer but keeps text on top */
+    z-index: 10;
+    margin-top: -50px; /* Adjusts vertical balance */
 }
 
-.hero h1 { font-size: 4rem; font-weight: 800; color: var(--primary); letter-spacing: -2px; margin: 0; }
-
-.hero-visual {
-    position: relative;
-    z-index: 5;
-    width: 100%;
-    max-width: 600px;
+.hero h1 { 
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* Responsive text size */
+    font-weight: 800; 
+    color: var(--primary); 
+    letter-spacing: -2px; 
+    margin: 10px 0; 
 }
 
-#main-product-img {
+/* CENTERING THE WHOLESALE TEXT */
+.hero-footer-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); /* The secret to perfect centering */
+    z-index: 10;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: var(--secondary);
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+/* --- PRODUCT PAGE FIX --- */
+.diagram-placeholder img {
     width: 100%;
     height: auto;
-    mix-blend-mode: multiply; /* REMOVES WHITE BACKGROUND BOX FROM IMAGES */
+    display: block;
+    mix-blend-mode: multiply;
 }
 
 /* --- THE COLLECTION: BENTO GRID --- */
@@ -90,7 +117,6 @@ nav {
     border: 1px solid #e2e8f0;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .bento-item:hover { transform: translateY(-8px); border-color: var(--brand-red); }
 
 .bento-img {
@@ -98,30 +124,19 @@ nav {
     bottom: -15px;
     right: -15px;
     width: 200px;        
-    mix-blend-mode: multiply; /* Fixes white box issue on cards */
+    mix-blend-mode: multiply;
 }
 
 /* --- INQUIRY SECTION --- */
-#contact { background: var(--white); }
 .inquiry-card {
     background: var(--light);
     padding: 60px;
     border-radius: 28px;
     border: 1px solid #e2e8f0;
 }
-.input-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-input, textarea {
-    padding: 18px;
-    border-radius: 12px;
-    border: 1px solid #cbd5e0;
-    width: 100%;
-    box-sizing: border-box;
-}
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+input, textarea { padding: 18px; border-radius: 12px; border: 1px solid #cbd5e0; width: 100%; box-sizing: border-box; }
+
 .btn-submit {
     background: var(--brand-red);
     color: white;
@@ -130,7 +145,9 @@ input, textarea {
     font-weight: 700;
     border: none;
     cursor: pointer;
+    transition: background 0.3s;
 }
+.btn-submit:hover { background: var(--primary); }
 
 /* --- FOOTER & WHATSAPP --- */
 footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
@@ -150,5 +167,6 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
 
 @media (max-width: 992px) {
     .bento-grid, .input-row { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2.5rem; }
+    .hero { height: auto; padding: 100px 0; }
+    .hero-footer-text { position: relative; bottom: 0; margin-top: 40px; }
 }
