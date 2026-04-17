@@ -27,15 +27,17 @@
 
     <section class="hero-scroll-wrapper">
         <div class="hero-sticky">
-            <div class="hero-content">
+            <div class="hero-content" style="z-index: 10; position: relative; margin-top: -15vh;">
                 <p class="hero-sub" style="color: var(--brand-red); letter-spacing: 2px; font-weight: 700;">Authorized HCH Distributor</p>
                 <h1>High-Precision Bearings</h1>
                 <h3>Precision at scale for the modern manufacturer</h3>
             </div>
-            <div class="hero-visual">
-                <img src="6000-diagram.png" alt="Featured HCH Bearing" id="main-product-img">
+            
+            <div class="hero-visual" style="z-index: 5;">
+                <img src="hero-bearing.png" alt="Featured HCH Bearing" id="main-product-img">
             </div>
-            <div class="hero-footer-text">
+
+            <div class="hero-footer-text" style="z-index: 10;">
                 <p>WHOLESALE ONLY</p>
             </div>
         </div>
@@ -98,25 +100,27 @@
             </div>
         </div>
     </section>
+
     <section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">Bulk Inquiry.</h2>
-        <div class="inquiry-card">
-            <form>
-                <div class="input-row">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="text" placeholder="Company Name" required>
-                </div>
-                <div class="input-row">
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="tel" placeholder="Phone Number (GST Linked)" required>
-                </div>
-                <textarea rows="5" placeholder="List your SKUs and Quantities (e.g., 6201-2RS x 500pcs)"></textarea>
-                <button type="submit" class="btn-submit">Submit Inquiry</button>
-            </form>
+        <div class="container">
+            <h2 class="section-title">Bulk Inquiry.</h2>
+            <div class="inquiry-card">
+                <form>
+                    <div class="input-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" placeholder="Company Name" required>
+                    </div>
+                    <div class="input-row">
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number (GST Linked)" required>
+                    </div>
+                    <textarea rows="5" placeholder="List your SKUs and Quantities (e.g., 6201-2RS x 500pcs)"></textarea>
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                </form>
+            </div>
         </div>
-    </div>
     </section>
+
     <a href="https://wa.me/910000000000" class="whatsapp-float">WhatsApp Inquiry</a>
 
     <footer>
@@ -132,19 +136,19 @@
             scrollTrigger: {
                 trigger: ".hero-scroll-wrapper",
                 start: "top top",
-                end: "+=150%", // How long the scroll lasts
-                pin: true,     // Keeps the section fixed while zooming
-                scrub: 1,      // Smoothly ties animation to scroll
+                end: "+=150%", 
+                pin: true,     
+                scrub: 1,      
             }
         });
 
         tl.to("#main-product-img", {
-            scale: 2.5,     // Zoom level
-            ease: "none"
+            scale: 2.5,     
+            ease: "power1.inOut" // Smoother easing
         }, 0)
         .to(".hero-content", {
             opacity: 0,
-            y: -50,
+            y: -100, // Moves up while fading
             ease: "none"
         }, 0);
     </script>
