@@ -170,3 +170,70 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
     .hero { height: auto; padding: 100px 0; }
     .hero-footer-text { position: relative; bottom: 0; margin-top: 40px; }
 }
+
+/* ========================================== */
+/* MOBILE & SAFARI RESPONSIVENESS OVERRIDES   */
+/* ========================================== */
+@media (max-width: 768px) {
+    /* 1. Reset grids from 2-columns to single stacked columns */
+    div[style*="grid-template-columns: 1.2fr 1fr"],
+    div[style*="grid-template-columns: 1fr 1fr"],
+    .navbar {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* 2. Adjust Navbar elements for stacking layout */
+    .navbar {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .nav-links {
+        justify-content: center !important;
+        padding: 0 !important;
+        gap: 15px !important;
+    }
+
+    /* Hide the navbar divider on mobile so it doesn't look like a random stray line */
+    div[style*="width: 1px; background: #334155"] {
+        display: none !important;
+    }
+
+    /* 3. Scale down massive heading sizes safely */
+    h1.section-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    div[style*="font-size: 2.2rem"] h2 {
+        font-size: 1.75rem !important;
+    }
+
+    /* 4. Fix massive spacing/padding gaps that push things off-screen */
+    p[style*="margin-top: -30px"] {
+        margin-top: -10px !important;
+        margin-bottom: 30px !important;
+        font-size: 1rem !important;
+    }
+
+    div[style*="padding: 40px"], 
+    div[style*="padding: 35px"] {
+        padding: 20px !important;
+    }
+
+    /* 5. Force wide bulk tables to scroll naturally without breaking container margins */
+    .specs-table th, .specs-table td {
+        padding: 10px 5px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 6. Fix scaled CTA buttons */
+    a[style*="padding: 20px 50px"] {
+        padding: 15px 25px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
