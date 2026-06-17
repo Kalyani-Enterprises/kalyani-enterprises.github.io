@@ -8,13 +8,18 @@
     --dark: #2d3748; 
 }
 
+/* --- FIXES OVERLAPPING NAV ON ANCHOR CLICK --- */
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 95px; /* Creates a clean offset matching the sticky navbar height */
+}
+
 body {
     background-color: var(--white);
     color: var(--dark);
     font-family: 'Inter', sans-serif;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth; 
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
@@ -35,12 +40,12 @@ nav {
 .hero { 
     width: 100%;
     overflow: hidden;
-    margin-bottom: 0px !important; /* Force layout baseline to touch next section */
+    margin-bottom: 0px !important; 
     padding-bottom: 0px !important;
 }
 .hero h1 { 
-    font-size: clamp(2rem, 5vw, 3rem) !important; /* Bounds size smoothly */
-    margin-top: 0px !important;    /* Strips out hidden vertical header margin leaks */
+    font-size: clamp(2rem, 5vw, 3rem) !important; 
+    margin-top: 0px !important;    
     margin-bottom: 10px !important;
 }
 .hero h3 {
@@ -50,7 +55,7 @@ nav {
 
 /* --- THE COLLECTION: BENTO GRID --- */
 .section { 
-    padding: 40px 0; /* Tightened from 80px to fix dead whitespace block */
+    padding: 40px 0; 
 }
 .bg-light { background-color: var(--light); }
 .section-title { 
@@ -150,14 +155,12 @@ footer { padding: 40px 0; text-align: center; background: #0f172a; color: #94a3b
 }
 
 @media (max-width: 768px) {
-    /* Stack elements inside explicit grid wrappers safely */
     div[style*="display: grid"], 
     div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
 
-    /* Convert row navbar layout into stack layout elements */
     .navbar {
         flex-direction: column !important;
         gap: 20px !important;
@@ -177,7 +180,6 @@ footer { padding: 40px 0; text-align: center; background: #0f172a; color: #94a3b
         gap: 15px !important;
     }
 
-    /* Hide spacing lines and divider layouts on small displays */
     div[style*="width: 1px; background: #334155"],
     div[style*="height: 25px; width: 1px"] {
         display: none !important;
