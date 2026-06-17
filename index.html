@@ -9,116 +9,153 @@
 </head>
 <body>
 
-    <nav>
-        <div class="container navbar">
-            <a href="index.html" class="logo" style="display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; text-decoration: none;">
-    <div style="font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px; white-space: nowrap;">
-        <span class="brand-red" style="color: var(--brand-red);">KALYANI</span> <span style="color: #ffffff;">ENTERPRISES</span>
-    </div>
-    <span style="color: var(--brand-red); letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; font-size: 0.65rem; margin-top: 6px; display: block; text-align: center; width: 100%;">
-        Authorized HCH Distributor
-    </span>
-</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#series">Products</a></li>
-                <li><a href="#contact">Inquiry</a></li>
-            </ul>
+    <!-- ========================================== -->
+    <!--       BALANCED LOGO & NAV CONTENTBAR       -->
+    <!-- ========================================== -->
+    <nav style="background: #0f172a; padding: 15px 0; border-bottom: 1px solid #1e293b;">
+        <div class="container navbar" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+            
+            <!-- LEFT SIDE: PRIMARY BRAND IDENTITY -->
+            <a href="index.html" class="logo" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; line-height: 1.2; text-decoration: none;">
+                <div style="font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px; white-space: nowrap;">
+                    <span class="brand-red" style="color: var(--brand-red);">KALYANI</span> <span style="color: #ffffff;">ENTERPRISES</span>
+                </div>
+                <span style="color: #94a3b8; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; font-size: 0.65rem; margin-top: 4px; display: block;">
+                    Industrial Bearing Distributors
+                </span>
+            </a> 
+
+            <!-- CENTER/RIGHT: LINKS & BADGE -->
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <ul class="nav-links" style="display: flex; list-style: none; gap: 25px; margin: 0; padding: 0;">
+                    <li><a href="index.html" style="color: #ffffff; text-decoration: none; font-weight: 500; font-size: 0.95rem;">Home</a></li>
+                    <li><a href="#about" style="color: #ffffff; text-decoration: none; font-weight: 500; font-size: 0.95rem;">About Us</a></li>
+                    <li><a href="#series" style="color: #ffffff; text-decoration: none; font-weight: 500; font-size: 0.95rem;">Products</a></li>
+                    <li><a href="#contact" style="color: #ffffff; text-decoration: none; font-weight: 500; font-size: 0.95rem;">Inquiry</a></li>
+                </ul>
+
+                <!-- VERTICAL DIVIDER LINE -->
+                <div style="height: 25px; width: 1px; background: #334155;"></div>
+
+                <!-- FAR RIGHT: THE SUPPORTING HCH BRAND AUTHENTICATION -->
+                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <img src="hch-logo.png" alt="HCH Logo" style="height: 20px; width: auto; object-fit: contain;">
+                    <span style="color: var(--brand-red); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;">
+                        Authorized
+                    </span>
+                </div>
+            </div>
+
         </div>
     </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>High-Precision Bearings</h1>
-        <h3 style="color: var(--light); font-weight: 400; margin-top: 10px;">
-            Precision at scale for the modern manufacturer
-        </h3>
-    </div>
-    
-</header>
+    <!-- ========================================== -->
+    <!--     SLIM SLATE HERO (HIGH READABILITY)     -->
+    <!-- ========================================== -->
+    <header class="hero" style="
+        position: relative; 
+        height: 45vh; 
+        min-height: 350px; 
+        background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('6000-bearing.jpeg') no-repeat center center; 
+        background-size: cover; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center;
+        padding: 0 20px;
+    ">
+        <div class="hero-content" style="max-width: 800px; transform: none; position: relative;">
+            <h1 style="color: #ffffff; font-size: 3rem; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                High-Precision Bearings
+            </h1>
+            <h3 style="color: #cbd5e1; font-weight: 500; margin: 0; font-size: 1.25rem;">
+                Precision at scale for the modern manufacturer
+            </h3>
+        </div>
+    </header>
 
+    <!-- ========================================== -->
+    <!--               ABOUT US SECTION             -->
+    <!-- ========================================== -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Us</h2>
             <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--secondary); font-size: 1.1rem;">
-                <p><strong>Established in 1996</strong>, Kalyani Enterprises has been a cornerstone in the industrial supply chain for over three decades. As an authorized distributor of HCH bearings, we bridge the gap between world-class manufacturing and local industrial requirements.</p>
+                <p><strong>Established in 1996</strong>, Kalyani Enterprises has anchored the industrial supply chain for over three decades as a premier Authorized Distributor of genuine HCH Bearings. We do not just supply parts; we secure production lines. By combining HCH's world-class automated manufacturing precision with our robust, centrally located inventory framework in Delhi, we provide Indian OEMs and enterprise manufacturers with an uncompromised, zero-disruption component lifecycle.</p>
+                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; text-align: left;">
                     <div class="feat" style="background: var(--light); padding: 30px; border-radius: 20px;">
-                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red);">Our Mission</h4>
-                        <p>To empower Indian manufacturers with high-precision mechanical components that ensure zero-downtime operations.</p>
+                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px;">Our Mission</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.6;">To eliminate mechanical failure and operational downtime across Indian industries by providing instant access to factory-certified, high-precision HCH rolling elements.</p>
                     </div>
                     <div class="feat" style="background: var(--light); padding: 30px; border-radius: 20px;">
-                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red);">Our Vision</h4>
-                        <p>To be the most trusted name in wholesale bearing distribution, recognized for technical expertise and reliability.</p>
+                        <h4 style="color: var(--primary); margin-bottom: 10px; border-bottom: 2px solid var(--brand-red); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px;">Our Vision</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.6;">To be recognized as India's most trusted and technically proficient industrial bearing partner, setting the absolute benchmark for inventory depth, batch traceability, and procurement integrity.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ========================================== -->
+    <!--             COLLECTIONS (BENTO)            -->
+    <!-- ========================================== -->
     <section id="series" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Collections</h2>
             <div class="bento-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 
-    <a href="6000.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
-        
-        <img src="6000-bearing.jpeg" alt="60 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        
-        <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
-            <div>
-                <span style="color: #ff4d4d; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Most Versatile</span>
-                <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">60 Series</h3>
-                <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Extra Light Deep Groove</p>
-            </div>
-            <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #ff4d4d; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
-        </div>
-    </a>
+                <a href="6000.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
+                    <img src="6000-bearing.jpeg" alt="60 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
+                        <div>
+                            <span style="color: #ff4d4d; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Most Versatile</span>
+                            <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">60 Series</h3>
+                            <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Extra Light Deep Groove</p>
+                        </div>
+                        <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #ff4d4d; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
+                    </div>
+                </a>
 
-    <a href="6200.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
-        
-        <img src="6200-bearing.jpeg" alt="62 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        
-        <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
-            <div>
-                <span style="color: #38bdf8; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Standard</span>
-                <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">62 Series</h3>
-                <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Light Duty Excellence</p>
-            </div>
-            <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #38bdf8; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
-        </div>
-    </a>
+                <a href="6200.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
+                    <img src="6200-bearing.jpeg" alt="62 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
+                        <div>
+                            <span style="color: #38bdf8; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Standard</span>
+                            <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">62 Series</h3>
+                            <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Light Duty Excellence</p>
+                        </div>
+                        <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #38bdf8; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
+                    </div>
+                </a>
 
-    <a href="6300.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
-        
-        <img src="6300-bearing.jpeg" alt="63 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        
-        <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
-            <div>
-                <span style="color: #cbd5e1; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Heavy Duty</span>
-                <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">63 Series</h3>
-                <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Medium Duty Power</p>
-            </div>
-            <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #cbd5e1; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
-        </div>
-    </a>
+                <a href="6300.html" class="bento-item" style="display: block; position: relative; border-radius: 20px; overflow: hidden; text-decoration: none; min-height: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 32, 91, 0.85) 0%, rgba(0, 32, 91, 0.4) 100%); z-index: 2;"></div>
+                    <img src="6300-bearing.jpeg" alt="63 Series" class="bento-img" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="bento-content" style="position: relative; z-index: 3; padding: 40px 30px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; box-sizing: border-box;">
+                        <div>
+                            <span style="color: #cbd5e1; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">Heavy Duty</span>
+                            <h3 style="font-size: 1.8rem; color: #ffffff; margin: 10px 0 5px 0; font-weight: 700;">63 Series</h3>
+                            <p style="color: #e2e8f0; font-size: 1.05rem; margin-bottom: 15px; font-weight: 400;">Medium Duty Power</p>
+                        </div>
+                        <small class="view-spec" style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #cbd5e1; width: fit-content; padding-bottom: 2px; margin-top: 20px;">View Specs →</small>
+                    </div>
+                </a>
 
-</div>
+            </div>
         </div>
     </section>
 
     <!-- ========================================== -->
-    <!-- TRUSTED BY / SECTORS & APPLICATIONS SECTION -->
+    <!--  TRUSTED BY / SECTORS & APPLICATIONS GRID  -->
     <!-- ========================================== -->
     <section id="trusted-by" class="section" style="background: var(--light); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 10px;">Market Presence & Applications</h2>
-            <p style="text-align: center; color: var(--secondary); max-width: 600px; margin: 0 auto 50px auto; font-size: 1.1rem; font-weight: 500;">
-                Our high-volume 2RS double-sealed bearing solutions run seamlessly inside prominent consumer goods, automotive lines, and heavy industrial machinery setups.
+            <h2 class="section-title" style="text-align: center; margin-bottom: 10px;">Market Presence & Engineering Integration</h2>
+            <p style="text-align: center; color: var(--secondary); max-width: 700px; margin: 0 auto 50px auto; font-size: 1.1rem; font-weight: 500; line-height: 1.6;">
+                From high-RPM consumer appliances to rugged automotive assemblies, our high-volume 2RS double-sealed HCH bearings are strategically deployed where low-noise, grease-retention, and vibration-free performance are non-negotiable.
             </p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
@@ -150,7 +187,7 @@
                     </div>
                 </div>
 
-                <!-- COLUMN 2: APPLICATION BRANDS & MACHINERY -->
+                <!-- COLUMN 2: MACHINERY APPLICATIONS -->
                 <div style="background: #ffffff; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
                     <h3 style="color: var(--primary); margin-top: 0; margin-bottom: 25px; font-size: 1.3rem; border-left: 4px solid var(--brand-red); padding-left: 12px; line-height: 1.2;">
                         OEM & Equipment Deployments
@@ -171,7 +208,9 @@
         </div>
     </section>
 
-    
+    <!-- ========================================== -->
+    <!--               BULK INQUIRIES               -->
+    <!-- ========================================== -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Bulk Inquiries</h2>
@@ -192,8 +231,10 @@
         </div>
     </section>
 
+    <!-- WHATSAPP ANCHOR -->
     <a href="https://wa.me/910000000000" class="whatsapp-float">WhatsApp Inquiry</a>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-content">
             <p>&copy; 2026 KALYANI ENTERPRISES. Authorized HCH Distributor. Delhi, India.</p>
